@@ -6,9 +6,9 @@ import time
 def setup():
 	global Buzzer
 	'''
-	initial the Buzzer module with SunFounder_PiPlus.Buzzer(port='A')
-	Set port to A or B, accoring to the port you plug the module in.
-	Leave empty for default setting port='A'
+	Initialize the Buzzer module with SunFounder_PiPlus.Buzzer(port='A')
+	Set the port to A or B, depending on which port you plug the module in.
+	By default, port='A'.
 	'''
 	Buzzer = Buzzer(port='B')
 
@@ -26,7 +26,7 @@ def main():
 		
 		print 'beep'
 		# Buzzer.beep(dt, times) to beep the buzzer
-		# dt for delta time.
+		# dt for delay time.
 		Buzzer.beep(0.5, times=4)
 	
 def destroy():

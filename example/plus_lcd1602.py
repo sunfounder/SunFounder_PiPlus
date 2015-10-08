@@ -4,25 +4,26 @@ from SunFounder_PiPlus import *
 def setup():
 	global LCD
 	'''
-	initial the LCD1602 module with SunFounder_PiPlus.LCD1602(BACKGROUND_LIGHT=1, ADDRESS=0x27)
-	Set ADDRESS to 0x20~0x27, accoring to the address you set onthe module(see more at www.sunfounder.com).
-	Set BACKGROUND_LIGHT to 0 or 1 to turn off or turn on the background light. 
-	Leave empty for default setting BACKGROUND_LIGHT=1/ADDRESS=0x27
+	Initialize the LCD1602 module with SunFounder_PiPlus.LCD1602(BACKGROUND_LIGHT=1, ADDRESS=0x27)
+	Set ADDRESS to 0x20~0x27, depending on the address you set on the module (see more at www.sunfounder.com).
+	Set BACKGROUND_LIGHT to 0 or 1 to turn off or turn on the backlight. 
+	By default, BACKGROUND_LIGHT=1/ADDRESS=0x27
 	'''
 	LCD = LCD1602(BACKGROUND_LIGHT=1)
 
 def main():
 	'''
-	Use write(position, row, string) to write words at specific location
-	position is for position in a row. from 0 to 15
-	row form 0 to 1
+	Use write(position, row, string) to write and display characters at a specific location
+	position in the function is for the position characters starts to appear in a row；
+	it ranges from 0 to 15.
+	row ranges form 0 to 1
 	'''
 	LCD.write(0, 0, 'Greetings!!')
 	LCD.write(1, 1, 'from SunFounder')
 	time.sleep(5)
 	
 	'''
-	Use clear() to clear the whole screen up
+	Use clear() to clear the whole screen.
 	'''
 	LCD.clear()
 

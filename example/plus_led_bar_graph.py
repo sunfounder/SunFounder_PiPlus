@@ -4,16 +4,16 @@ from SunFounder_PiPlus import *
 def setup():
 	global Bar
 	'''
-	initial the LED Bar Graph module with SunFounder_PiPlus.LED_Bar_Graph(port='A')
-	Set port to A or B, accoring to the port you plug the module in.
-	Leave empty for default setting port='A'
+	Initialize the LED Bar Graph module with SunFounder_PiPlus.LED_Bar_Graph(port='A')
+	Set the port to A or B, depending on which port you plug the module in.
+	By default, port='A'.
 	'''
 	Bar = LED_Bar_Graph(port='B')
 
 def main():
 	while True:
 		'''
-		meter(value) is a meter, value range from 0 to 255.
+		meter(value) is a meter and the value ranges from 0 to 255.
 		'''
 		
 		for x in range(255):
@@ -22,7 +22,9 @@ def main():
 			time.sleep(0.01)
 		
 		'''
-		pulse(value) is also a meter, but put 0 is in the middle.
+		pulse(value) is also a meter, but it defines that when the LEDs all go out 
+		to the middle one, the value is 0; when the value increases, the LEDs lights up 
+		from the middle to two opposite directions.
 		value range from 0 to 255
 		'''
 		

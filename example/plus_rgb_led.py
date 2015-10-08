@@ -4,9 +4,9 @@ from SunFounder_PiPlus import *
 def setup():
 	global RGB
 	'''
-	initial the RGB LED module with SunFounder_PiPlus.RGB_LED(port='A')
-	Set port to A or B, accoring to the port you plug the module in.
-	Leave empty for default setting port='A'
+	Initialize the RGB LED module with SunFounder_PiPlus.RGB_LED(port='A')
+	Set the port to A or B, depending on which port you plug the module in.
+	By default, port='A'.
 	'''
 	RGB = RGB_LED(port='B')
 
@@ -19,8 +19,7 @@ def main():
 		
 		'''
 		rgb(Red_value, Green_value, Blue_value):
-		This is a function to turn on the RGB 
-		in specific RGB value, all value range from 0 to 255
+		a function to turn on the RGB at a specific RGB value, ranging from 0 to 255
 		'''
 		RGB.rgb(255, 0, 0)
 		time.sleep(1)
@@ -40,9 +39,9 @@ def main():
 		
 		'''
 		breath(Red_value, Green_value, Blue_value, dt=0.01): 
-		This is a function to let the RGB breathe in specific RGB value,
-		dt for delta time. Leave empty for default setting 0.01s
-		RGB value range from 0 to 255
+		a function to make the RGB "breathe" at a specific RGB value;
+		dt is for delay time and by default it is 0.01s.
+		RGB value ranges from 0 to 255
 		'''
 		RGB.breath(255, 0, 0)
 		RGB.breath(0, 255, 0)
@@ -54,9 +53,9 @@ def main():
 		
 		'''
 		hsb(Hue_value, _s=1, _b=1):
-		This is a function to specific color in HSB.
-		Hue_value range from 0 to 360
-		_s and _b range from 0.00 to 1. Leave empty for default setting 1
+		a function to make the LED flash a specific color in hue–saturation–brightness(HSB).
+		Hue_value ranges from 0 to 360,
+		and _s and _b, from 0.00 to 1.00 By default it is 1.00.
 		'''
 		for i in range(360):
 			RGB.hsb(i)

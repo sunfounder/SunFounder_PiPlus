@@ -4,7 +4,7 @@ from SunFounder_PiPlus import *
 def setup():
 	global Joystick
 	'''
-	initial the Joystick module with SunFounder_PiPlus.Joystick()
+	Initialize the Joystick module with SunFounder_PiPlus.Joystick()
 	'''
 	Joystick = Joystick()
 
@@ -12,8 +12,8 @@ def main():
 	while True:
 		'''
 		get_status()
-		returns a status value in  UP, DOWN, LEFT, RIGHT, HOME and PRESSED
-		recognized it like this:
+		returns a status value in UP, DOWN, LEFT, RIGHT, HOME and PRESSED
+		Recognize it like this:
 		'''
 		status =  Joystick.get_status()
 		if status == UP:
@@ -31,8 +31,8 @@ def main():
 
 		'''
 		read()
-		a function to read all the 3pins of Joystick. It returns 3 value
-		x value, y value and button value. get the value like this :
+		A function to read all the 3 pins of Joystick. It returns 3 values:
+		x value, y value and button value. The value will be like this:
 		'''
 		print 'X = %d, Y = %d, Button = %d.'% Joystick.read()
 				

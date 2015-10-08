@@ -4,7 +4,7 @@ from SunFounder_PiPlus import *
 def setup():
 	global SP
 	'''
-	initial the Slide Potentiometers module with SunFounder_PiPlus.Slide_Potentiometers()
+	Initialize the Slide Potentiometers module with SunFounder_PiPlus.Slide_Potentiometers()
 	'''
 	SP = Slide_Potentiometers()
 
@@ -12,14 +12,14 @@ def main():
 	while True:
 		'''
 		get_value(*sp)
-		get specific potentiometers' value by argumen *sp, range from 1 to 3.
-		mount of argument better be less than 3, but MUST be the same as ...(help me out here)
-		for example:
-		sp1 = SP.get_valur(1)
-		sp1, sp2 = SP.get_valur(1, 2)
-		sp3 = SP.get_valur(3)
-		sp1, sp3 = SP.get_valur(1, 3)
-		sp1, sp2, sp3 = SP.get_valur(1, 2, 3)
+		to get the specific potentiometer's value by argument *sp which ranges from 1 to 3.
+		The argument should better be less than 3, but MUST comply with the potentiometers.
+		For example:
+		sp1 = SP.get_value(1)
+		sp1, sp2 = SP.get_value(1, 2)
+		sp3 = SP.get_value(3)
+		sp1, sp3 = SP.get_value(1, 3)
+		sp1, sp2, sp3 = SP.get_value(1, 2, 3)
 		
 		'''
 		sp1, sp2 = SP.get_value(1, 2)

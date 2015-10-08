@@ -4,28 +4,27 @@ from SunFounder_PiPlus import *
 def setup():
 	global Ring
 	'''
-	initial the LED Ring module with SunFounder_PiPlus.LED_Ring(port='A')
-	Set port to A or B, accoring to the port you plug the module in.
-	Leave empty for default setting port='A'
+	Initialize the LED Ring module with SunFounder_PiPlus.LED_Ring(port='A')
+	Set the port to A or B, depending on which port you plug the module in.
+	By default, port='A'.
 	'''
 	Ring = LED_Ring(port='a')
 	
 def main():
 	while True:
 		''' 
-		Breathing light Function: breath(dt=0.03), 
-		dt for delta time, Leave empty for default setting 0.03
+		Breathing light function: breath(dt=0.03), 
+		dt is short for delay time; by default it is 0.03.
 		'''
 		for i in range(4):
 			Ring.breath(dt=0.01)
 		
 		'''
-		Spin Function: spin(ring, w=0, dt=0.2)
-		w for wise, w=0: clockwise, w=1: anticlockwise
-		dt for delta time. Leave w and dt, for default setting 0.03
-		.SINGLE, .STAR, .TAIL are three pre set tuple.
-		You can make your own tupleas: Mytuple = (0, 60, 0, 60, 60, 60, 0, 60)
-		Tuple must be list() before using.
+		Spin function: spin(ring, w=0, dt=0.2)
+		w is for wise. w=0: clockwise; w=1: anticlockwise
+		dt for delay time. By default w and dt are 0.03.
+		SINGLE, STAR and TAIL are three pre-set lists.
+		You can make your own list as: Mylist = [0, 60, 0, 60, 60, 60, 0, 60]
 		'''
 		ring = list(Ring.SINGLE())
 		for i in range(16):	# 8 for a circle, 16 for two
@@ -40,9 +39,9 @@ def main():
 			Ring.spin(ring, w=1)
 		
 		'''
-		Meter Fuction: LED_meter(_value, brightness=40)
-		_value must be in [0, 255].
-		brightness effects all LED. Leave empty for default setting 40
+		Meter function: LED_meter(_value, brightness=40)
+		_value must be within [0, 255].
+		Brightness affects all LED. By default it is 40.
 		'''
 		for i in range(256):
 			Ring.meter(i, brightness=10)
