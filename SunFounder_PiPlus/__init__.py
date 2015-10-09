@@ -51,7 +51,7 @@ AIN3	=	3
 GPIO.setmode(GPIO.BOARD)
 
 '''
-Defined Joystick status
+Define the Joystick status
 '''
 UP = 0
 LEFT = 1
@@ -62,16 +62,16 @@ PRESSED = 6
 
 RUNTIME = 1000
 
-HOUR12 = 0		#12 hour clock define
-HOUR24 = 1		#24 hour clock define
+HOUR12 = 0		#12 hour clock defined
+HOUR24 = 1		#24 hour clock defined
 '''
-Define a Map fuction to map different ranges
+Define a Map function to map different ranges
 '''
 def Map(x, in_min, in_max, out_min, out_max):
 	return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min
 
 '''
-A function for Normal Distribution function
+A function for Normal Distribution use
 '''
 def NormalDistribution(x, u=0, d=1):
 	PI = 3.1415926
@@ -88,7 +88,7 @@ def LowpassFilter(_value, _new_value):
 	return ((_base-_a)*_value)/100.0+(_a*_new_value)/100.0
 
 '''
-A function to get Threshold
+A function to get a Threshold
 '''
 def Threshold(_value, threshold=200):
 	if _value > threshold:
