@@ -22,8 +22,8 @@ def main():
 		'''
 		Spin function: spin(ring, w=0, dt=0.2)
 		w is for wise. w=0: clockwise; w=1: anticlockwise
-		dt for delay time. By default w and dt are 0.03.
-		SINGLE, STAR and TAIL are three pre-set lists.
+		dt for delay time. By default w=0 and dt=0.03.
+		SINGLE(), STAR() and TAIL() are three pre-set lists.
 		You can make your own list as: Mylist = [0, 60, 0, 60, 60, 60, 0, 60]
 		'''
 		ring = list(Ring.SINGLE())
@@ -39,9 +39,9 @@ def main():
 			Ring.spin(ring, w=1)
 		
 		'''
-		Meter function: LED_meter(_value, brightness=40)
+		Meter function: meter(_value, brightness=40)
 		_value must be within [0, 255].
-		Brightness affects all LED. By default it is 40.
+		Brightness is a value affects all LED, with in [0, 100]. By default it is 40.
 		'''
 		for i in range(256):
 			Ring.meter(i, brightness=10)
