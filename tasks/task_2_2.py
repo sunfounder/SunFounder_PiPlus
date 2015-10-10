@@ -3,11 +3,6 @@ from SunFounder_PiPlus import *
 
 def setup():
 	global Bar, RE, status
-	'''
-	initial the sample_sample module with PiPlus.Buttons(port='A')
-	Set port to A or B, accoring to the port you plug the module in.
-	Leave empty for default setting port='A'
-	'''
 	Bar = LED_Bar_Graph(port='A')
 	RE = Rotary_Encoder(port='B')
 	RE.add_event_detect(btn_rising = btn)

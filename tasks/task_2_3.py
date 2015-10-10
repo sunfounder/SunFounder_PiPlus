@@ -3,11 +3,6 @@ from SunFounder_PiPlus import *
 
 def setup():
 	global RGB
-	'''
-	initial the sample_sample module with PiPlus.Buttons(port='A')
-	Set port to A or B, accoring to the port you plug the module in.
-	Leave empty for default setting port='A'
-	'''
 	RGB = RGB_LED(port='A')
 
 def main():
