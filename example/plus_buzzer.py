@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 from SunFounder_PiPlus import *
 
-import PiPlus
-import time
 def setup():
 	global Buzzer
 	'''
