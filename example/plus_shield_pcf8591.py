@@ -4,7 +4,7 @@ from PiPlus import *
 def setup():
 	global ADC
 	'''
-	initial the PCF8591 module with PiPlus.PCF8591()
+	Initialize the PCF8591 module with PiPlus.PCF8591()
 	'''
 	ADC = PCF8591()
 

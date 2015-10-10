@@ -41,7 +41,7 @@ def main():
 		'''
 		Meter function: meter(_value, brightness=40)
 		_value must be within [0, 255].
-		Brightness is a value affects all LED, with in [0, 100]. By default it is 40.
+		Brightness is a value that affects all LEDs, within a range [0, 100]. By default it is 40.
 		'''
 		for i in range(256):
 			Ring.meter(i, brightness=10)
