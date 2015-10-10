@@ -23,9 +23,9 @@ def main():
 		sp1, sp2, sp3 = SP.get_value(1, 2, 3)
 		
 		'''
-		sp1, sp2 = SP.get_value(1, 2)
-		print sp1, sp2
-		time.sleep(0.2)
+		sp1, sp2, sp3 = SP.get_value(1, 2, 3)
+		print 'RS1 = %d, RS2 = %d, RS3 = %d' % (sp1, sp2, sp3)
+		time.sleep(0.1)
 
 def destroy():
 	SP.destroy()
