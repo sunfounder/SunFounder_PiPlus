@@ -34,7 +34,7 @@ def main():
 		A function to read all the 3 pins of Joystick. It returns 3 values:
 		x value, y value and button value. The value will be like this:
 		'''
-		print 'X = %d, Y = %d, Button = %d.'% Joystick.read()
+		print 'X = %d, Y = %d, Button = %d.\n'% Joystick.read()
 				
 		
 		time.sleep(0.2)
