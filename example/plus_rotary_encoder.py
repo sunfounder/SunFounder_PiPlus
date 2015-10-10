@@ -4,7 +4,7 @@ from SunFounder_PiPlus import *
 def setup():
 	global RE
 	'''
-	Initialize the Buttons module with SunFounder_PiPlus.Buttons(port='A')
+	Initialize the Rotary Encoder module with SunFounder_PiPlus.Rotary_Encoder(port='A')
 	Set the port to A or B, depending on which port you plug the module in.
 	By default, port='A'.
 	'''
