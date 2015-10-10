@@ -65,11 +65,18 @@ RUNTIME = 1000
 HOUR12 = 0		#12 hour clock defined
 HOUR24 = 1		#24 hour clock defined
 
+SLOW = 0
+FAST = 1
+
 MORSECODE = {
 	'A':'01', 'B':'1000', 'C':'1010', 'D':'100', 'E':'0', 'F':'0010', 'G':'110',
 	'H':'0000', 'I':'00', 'J':'0111', 'K':'101', 'L':'0100', 'M':'11', 'N':'10',
 	'O':'111', 'P':'0110', 'Q':'1101', 'R':'010', 'S':'000', 'T':'1',
-	'U':'001', 'V':'0001', 'W':'011', 'X':'1001', 'Y':'1011', 'Z':'1100'
+	'U':'001', 'V':'0001', 'W':'011', 'X':'1001', 'Y':'1011', 'Z':'1100',
+	'1':'01111', '2':'00111', '3':'00011', '4':'00001', '5':'00000',
+	'6':'10000', '7':'11000', '8':'11100', '9':'11110', '0':'11111',
+	'?':'001100', '/':'10010', ',':'110011', '.':'010101', ';':'101010',
+	'!':'101011', '@':'011010', ':':'111000',
 	}
 
 '''
@@ -366,10 +373,19 @@ class Buzzer(object):
 			self.off()
 			time.sleep(dt)
 
-	def morsecode(self, code):
+	def morsecode(self, code, speed=FAST):
+		if speed == FAST:
+			pause = 0.25
+		if speed == SLOW:
+			pause = 0.5
 		code = code.upper()
-		for i in code:
-			print i
+		for letter in code:
+			for tap in MORSECODE[letter]:
+				if tap == '0':
+					self.beep(dt=pause/2)
+				if tap == '1':
+					self.beep(dt=pause)
+			time.sleep(pause)
 
 	def destroy(self):
 		self.off()

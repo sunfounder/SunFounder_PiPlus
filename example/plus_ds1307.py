@@ -11,6 +11,7 @@ def setup():
 	DT = DS1307(HOUR12)
 
 def main():
+	count = 0
 	while True:
 		'''
 		get_datetime() returns the output of 'hwclock -r' command
@@ -23,6 +24,8 @@ def main():
 		#date, time = DT.get_split_datetime()
 		#print 'date:', date
 		#print 'time:', time
+		count += 1
+		print count
 
 def destroy():
 	DT.destroy()

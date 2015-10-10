@@ -12,6 +12,7 @@ def setup():
 
 def main():
 	while True:
+		'''
 		print 'on'
 		# Buzzer.on() to turn on the buzzer
 		Buzzer.on()
@@ -26,6 +27,16 @@ def main():
 		# Buzzer.beep(dt, times) to beep the buzzer
 		# dt for delay time.
 		Buzzer.beep(0.5, times=4)
+		'''
+		
+		print 'Morse code'
+		'''
+		Buzzer.morsecode(string, speed=FAST) to convert your string
+		value to a Morse code and play it with the buzzer.
+		speed argument could be set to SLOW or FAST, leave empty for
+		default setting to FAST.
+		'''
+		Buzzer.morsecode('sms')
 	
 def destroy():
 	Buzzer.destroy()

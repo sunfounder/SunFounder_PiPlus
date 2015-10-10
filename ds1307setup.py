@@ -133,7 +133,7 @@ def setup():
 			print 'Finally, we set the date. It took forever. But anyway.',
 
 		while True:
-			print '\nYou've just set the corrent time to: %s:%s:%s' % (hour, minute, second)
+			print '\nYou\'ve just set the corrent time to: %s:%s:%s' % (hour, minute, second)
 			confirm = raw_input("Are you sure about that?(y/n) ")
 			if confirm == 'y' or confirm == 'Y':
 				confirm = True
