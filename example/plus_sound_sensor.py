@@ -15,7 +15,10 @@ def main():
 		to return the value of microphone.
 		The value ranges from 0 to 255.
 		'''
-		print MIC.read()
+		sound_value = 0
+		sound_value = MIC.read()
+		if sound_value > 250:
+			print 'Detect Sound! Sound value =', sound_value
 
 def destroy():
 	MIC.destroy()
