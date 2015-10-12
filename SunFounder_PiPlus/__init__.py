@@ -507,18 +507,25 @@ class RGB_LED(object):
 			self.rgb(_R_val*255.0, _G_val*255.0, _B_val*255.0)
 		except:
 			print _R_val, _G_val, _B_val
-		'''
-		R = abs(i-384)-128
-		G = -abs(i-256)+256
-		B = -abs(i-512)+256
-		if R < 0:
-			R = 0
-		if G < 0:
-			G = 0
-		if B < 0:
-			B = 0
-		self.on(R, G, B)
-		'''
+
+	def fireup(self):
+		_color = [255, 14, 0]
+		for i in range(1, 17):
+			_rate = ((i * i)-1) / 255.0
+			_r = _rate * _color[0]
+			_g = _rate * _color[1]
+			_b = _rate * _color[2]
+			self.rgb(_r, _g, _b)
+			time.sleep(0.03)
+		for i in range(1, 7):
+			_rate = ((i * i)-1) / 255.0
+			_r = (1 - _rate) * _color[0]
+			_g = (1 - _rate) * _color[1]
+			_b = (1 - _rate) * _color[2]
+			self.rgb(_r, _g, _b)
+			time.sleep(0.03)
+			
+
 	def destroy(self):
 		self.off()
 		self._R.stop()
