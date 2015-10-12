@@ -14,7 +14,7 @@ def main():
 		get_value(*sp)
 		to get the specific potentiometer's value by argument *sp which ranges from 1 to 3.
 		The argument should better be less than 3, 
-		when the numbder of the arguments MUST comply with the potentiometers involved.
+		when the number of the arguments MUST comply with the potentiometers involved.
 		For example:
 		sp1 = SP.get_value(1)
 		sp1, sp2 = SP.get_value(1, 2)
