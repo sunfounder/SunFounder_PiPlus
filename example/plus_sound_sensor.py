@@ -9,6 +9,7 @@ def setup():
 	MIC = Sound_Sensor()
 
 def main():
+	threshold = 200
 	while True:
 		'''
 		read()
@@ -17,7 +18,7 @@ def main():
 		'''
 		sound_value = 0
 		sound_value = MIC.read()
-		if sound_value > 250:
+		if sound_value > threshold:
 			print 'Detect Sound! Sound value =', sound_value
 
 def destroy():
