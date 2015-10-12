@@ -15,7 +15,7 @@ def main():
 	'''
 	Use write(position, row, string) to write and display characters at a specific location
 	position in the function is for the position characters starts to appear in a row;
-	row ranges form 0 to 1
+	row ranges from 0 to 1
 	'''
 	LCD.write(0, 0, 'Greetings!!')
 	LCD.write(1, 1, 'From SunFounder')
