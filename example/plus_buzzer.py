@@ -30,10 +30,10 @@ def main():
 		'''
 		
 		print 'Morse code'
-		# morsecode(string, speed=FAST) to convert your string
-		# value to a Morse code and play it with the buzzer.
-		# speed argument could be set to SLOW or FAST, leave empty for
-		# default setting to FAST.
+		# morsecode(string, speed=FAST) to convert your strings
+		# to a Morse code and play it with the buzzer.
+		# The argument speed could be set to SLOW or FAST.
+		# By default it is FAST.
 		Buzzer.morsecode('sms')
 		time.sleep(1)
 
