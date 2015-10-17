@@ -247,7 +247,7 @@ class LED_Ring(object):
 	def ALL_BRIGHT(self):
 		return [100, 100, 100, 100, 100, 100, 100, 100]
 		
-	def ALL_DARK(self):
+	def ALL_DIM(self):
 		return [ 60,  60,  60,  60,  60,  60,  60,  60]
 		
 	def ALL_OFF(self):
@@ -654,6 +654,10 @@ class Analog_Port(object):
 		self._adc.destroy()
 
 class Photoresistor(Analog_Port):
+	def read(self):
+		_value = self._adc.read(AIN0)
+		return _value
+
 	def brightness(self):
 		return 255 - self._adc.read(AIN3)
 
