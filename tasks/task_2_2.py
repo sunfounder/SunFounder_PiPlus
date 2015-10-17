@@ -21,7 +21,7 @@ def main():
 	
 	while True:
 		if status != False:
-			value = RE.rotary_deal(value, step=2)
+			value = RE.rotary_deal(value, step=20)
 			if value > 255:
 				value = 255
 			if value < 0:
