@@ -3,8 +3,8 @@
 '''
 Module:
 	It's a simple script for SunFounder PiPlus series.
-	This script just simplely convert the GPIOs from GPIO.BOARD to PIPLUS
-	so it's depend on RPi.GPIO
+	This script just simply converts the GPIOs from GPIO.BOARD to PIPLUS,
+	so it depends on RPi.GPIO.
 	Use this module like this:
 
 		import RPi.GPIO as GPIO

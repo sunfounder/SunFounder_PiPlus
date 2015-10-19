@@ -5,7 +5,7 @@ from SunFounder_PiPlus import *
 
 # Define a setup() function
 def setup():
-	# Define global modules' names and other necessary variables
+	# Define the global variables of modules needed and other necessary variables
 	global Btn, Buzz, RGB, color
 	
 	# Initialize your modules
@@ -18,20 +18,20 @@ def setup():
 	color = [0, 0, 0]
 	
 
-# Define a main function
+# Define a main() function
 def main():
-	# Main thing your script does
+	# The main thing your script does
 	while True:
 		pass		# do nothing
 		
-# Define a destroy function to release resource of GPIO etc.
+# Define a destroy() function to releaseGPIO  resources etc.
 def destroy():
-	# Add all destroy function for all Plus modules
+	# Add the destroy() function for all Plus modules
 	Btn.destroy()
 	Buzz.destroy()
 	RGB.destroy()
 
-	# Clean up GPIOs MUST be at the last line in destroy function
+	# A GPIO.cleanup() MUST be added at the last line in each destroy() function
 	GPIO.cleanup()
 
 # Other functions if necessary 
@@ -65,7 +65,7 @@ def beep(chn):
 	if GPIO.input(Btn.RIGHT) == 1:
 		Buzz.off()
 
-# if-main function to control the 3 functions
+# if - the main function to control the three functions
 if __name__ == "__main__":
 	try:
 		setup()
