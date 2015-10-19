@@ -5,16 +5,18 @@ from SunFounder_PiPlus import *
 
 # Define a setup() function
 def setup():
-	# Define global modules’ names and other necessary variables
-	global Btn, Buzz, RGB
+	# Define global modules' names and other necessary variables
+	global Btn, Buzz, RGB, color
 	
 	# Initialize your modules
 	Btn = Buttons(port='B')
-	Buzz = Buzzer(port=’A’)
-	RGB = RGB_LED(port=’A’)
+	Buzz = Buzzer(port='A')
+	RGB = RGB_LED(port='A')
 	
 	# Other setup
-	Buttons.add_event_detect(up_both=red,left_both=green, down_both=blue, right_both=beep)
+	Btn.add_event_detect(up_both=red,left_both=green, down_both=blue, right_both=beep)
+	color = [0, 0, 0]
+	
 
 # Define a main function
 def main():
@@ -35,21 +37,27 @@ def destroy():
 # Other functions if necessary 
 def red(chn): 
 	if GPIO.input(Btn.UP) == 0:
-		RGB.rgb(255, 0, 0)
+		color[0] = 255
+		RGB.rgb(color[0], color[1], color[2])
 	if GPIO.input(Btn.UP) == 1:
-		RGB.rgb(0, 0, 0)
+		color[0] = 0
+		RGB.rgb(color[0], color[1], color[2])
 
 def green(chn): 
 	if GPIO.input(Btn.LEFT) == 0:
-		RGB.rgb(0, 255, 0)
+		color[1] = 255
+		RGB.rgb(color[0], color[1], color[2])
 	if GPIO.input(Btn.LEFT) == 1:
-		RGB.rgb(0, 0, 0)
+		color[1] = 0
+		RGB.rgb(color[0], color[1], color[2])
 
 def blue(chn): 
 	if GPIO.input(Btn.DOWN) == 0:
-		RGB.rgb(0, 0, 255)
+		color[2] = 255
+		RGB.rgb(color[0], color[1], color[2])
 	if GPIO.input(Btn.DOWN) == 1:
-		RGB.rgb(0, 0, 0)
+		color[2] = 0
+		RGB.rgb(color[0], color[1], color[2])
 
 def beep(chn): 
 	if GPIO.input(Btn.RIGHT) == 0:
