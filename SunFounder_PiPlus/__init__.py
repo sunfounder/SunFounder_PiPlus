@@ -659,7 +659,7 @@ class Photoresistor(Analog_Port):
 		return _value
 
 	def brightness(self):
-		return 255 - self._adc.read(AIN3)
+		return 255 - self._adc.read(AIN0)
 
 class Slide_Potentiometers(Analog_Port):
 	def get_value(self, *_sp): # _sp: slider potentiometer
