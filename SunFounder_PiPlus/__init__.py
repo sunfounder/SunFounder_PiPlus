@@ -352,9 +352,9 @@ class Buzzer(object):
 	def __init__(self, port='A'):
 		self._port = port
 		if self._port == 'A' or self._port == 'a':
-			self._Buzzer = DA4
+			self._Buzzer = DA8
 		elif self._port == 'B' or self._port == 'b':
-			self._Buzzer = DB4
+			self._Buzzer = DB8
 		else:
 			print "port should be 'A' or 'B' like: '(port='A')'"
 			quit()

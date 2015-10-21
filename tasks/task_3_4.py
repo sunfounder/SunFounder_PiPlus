@@ -7,7 +7,7 @@ def setup():
 	Buzzer = Buzzer(port='A')
 
 def main():
-	base = 100
+	base = 30
 	while True:
 		flag = []
 		for i in range(base):

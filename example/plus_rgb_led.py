@@ -53,7 +53,7 @@ def main():
 		
 		'''
 		hsb(Hue_value, _s=1, _b=1):
-		a function to make the LED flash a specific color in hue–saturation–brightness(HSB).
+		a function to make the LED flash a specific color in hue-saturation-brightness(HSB).
 		Hue_value ranges from 0 to 360,
 		and _s and _b, from 0.00 to 1.00 By default it is 1.00.
 		'''
