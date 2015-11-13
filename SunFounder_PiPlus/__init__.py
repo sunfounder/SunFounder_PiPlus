@@ -1,3 +1,14 @@
+#=============== SunFounder_PiPlus =================
+#
+#	SunFounder_PiPlus is a kit, from SunFounder, 
+#	was destigned for RPi module B+ and RPi2 module B
+#
+#	It a kit with no wires just plug & play.
+#
+#	This program is under GNU license.
+#
+
+
 #!/usr/bin/env python
 import RPi.GPIO as GPIO
 import time
