@@ -1,11 +1,11 @@
 #=============== SunFounder_PiPlus =================
 #
-#	SunFounder_PiPlus is a kit, from SunFounder, 
-#	was destigned for RPi module B+ and RPi2 module B
+#	SunFounder PiPlus is a kit from SunFounder, 
+#	designed for Raspbery Pi model B+ and Raspbery Pi 2 model B.
 #
-#	It a kit with no wires just plug & play.
+#	It is a kit with no wires -- just plug & play.
 #
-#	This program is under GNU license.
+#	This program is under the GNU license.
 #
 
 

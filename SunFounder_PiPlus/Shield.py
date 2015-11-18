@@ -78,7 +78,7 @@ class PCF8591(object):
 		self._address = Address
 		self._bus = _bus
 
-	def read(self, chn): #channel
+	def read(self, chn): #chn means channel
 		if chn == 0:
 			self._bus.write_byte(self._address,0x40)
 		if chn == 1:
@@ -94,9 +94,8 @@ class PCF8591(object):
 		return self.read(0), self.read(1), self.read(2), self.read(3)
 		
 	def write(self, val):
-		_temp = val # move string value to temp
-		_temp = int(_temp) # change string to integer
-		# print temp to see on terminal else comment out
+		_temp = val # Transfer the string value to temp
+		_temp = int(_temp) # Change the string to an integer
 		self._bus.write_byte_data(self._address, 0x40, _temp)
 		
 	def destroy(self):

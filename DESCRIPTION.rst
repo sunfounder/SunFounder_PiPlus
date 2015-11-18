@@ -1,31 +1,32 @@
-SunFounder PiPlus for RPi
+SunFounder PiPlus for Raspberry Pi
 =======================
 
-SunFounder_PiPlus is a Package for SunFounder PiPlus Kit.
+SunFounder PiPlus is a package for the SunFounder PiPlus Kit.
 
-PiPlus Kit is a kit with 14 modules, and with no wire(not wireless) and modulize
-concept. This package is to use PiPlus in a easy and funny way.
+The PiPlus Kit is a kit with 14 modules, and uses no wires (not wireless) 
+since it's developed based on a modulization concept. 
+This package is to use PiPlus in a easy and funny way.
 
-To use this package, First you need a set of PiPlus, would be better.
+To use this package, first you'd better have a set of PiPlus.
 
-Second, to use this package, you need to import the package, better like this:
+Then, you need to import the package before next step, better like this:
 
 	from SunFounder_PiPlus import *
 
-Third, define setup() function include all the class of the module you need:
+Define the setup() function including all the classes of the module you need:
 	
 	def setup():
 		global Buzz
 		Buzz = Buzzer(port='A')
 
-Forth, define a main() functon include the pre-defined functions you need:
+Next, define a main() functon including the pre-defined functions you need:
 	
 	def main():
 		while True:
 			Buzz.morsecode("sms")
 
-Finally, before you run the app, define a destory function, and an "if-main" 
-funtion to run the app:
+Finally, before you run the app, define a destory() function, and an "if-main" 
+funtion:
 	
 	def destroy():
 		Buzz.destroy()
@@ -38,11 +39,11 @@ funtion to run the app:
 		except KeyboardInterrupt:
 			destroy()
 
-Save it in your favorite name like buzz.py. Then, you can run the app with command:
+Save it in your favorite name, like mine buzz.py. Then, you can run the app with the command:
 
 sudo python buzz.py
 
 Typical contents for this file would include an overview of the project, basic
-usage examples, etc. Generally, including the project changelog in here is not
-a good idea, although a simple "What's New" section for the most recent version
+usage examples, etc. Generally, including the project changelog here is not
+a good idea; but a simple "What's New" section for the most recent version
 may be appropriate.
