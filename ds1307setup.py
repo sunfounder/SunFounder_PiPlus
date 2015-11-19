@@ -13,7 +13,7 @@ def setup():
 		time.sleep(0.5)
 		os.system('hwclock -r')
 		while True:
-			check = raw_input('Is it right? Do you need to set the clock? ')
+			check = raw_input('Is it right? Do you need to set the clock? (y/n)')
 			if check == 'n' or check == 'N':
 				print 'OK, we are done here. Installation finished.'
 				quit()
