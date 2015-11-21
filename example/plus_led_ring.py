@@ -6,9 +6,9 @@ def setup():
 	'''
 	Initialize the LED Ring module with SunFounder_PiPlus.LED_Ring(port='A')
 	Set the port to A or B, depending on which port you plug the module in.
-	By default, port='A'.
+	Leave it empty for default setting:x port='A'.
 	'''
-	Ring = LED_Ring(port='a')
+	Ring = LED_Ring(port='B')
 	
 def main():
 	while True:
