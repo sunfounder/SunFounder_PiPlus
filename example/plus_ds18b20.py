@@ -11,7 +11,7 @@ def setup():
 def main():
 	while True:
 		'''
-		DS18B20.read(unit)
+		DS18B20.get_temperature(unit)
 		This function reads the temperature value from DS18B20.
 		Set the unit to DS18B20.C for Celsius degree
 		Set the unit to DS18B20.F for Fahrenheit degree
