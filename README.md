@@ -1,6 +1,9 @@
 ### SunFounder PiPlus Kit C/Python Code for RaspberryPi Rev.2 Module B (Compatible for Rev.1 Module B/B+)
 This is the C/Python code for SunFounder PiPlus Kit.
 
+Version 1.2 2016/04/20 update:
+
+ - fix "AttributeError: 'Ds1307' object has no attribute 'destroy'"
 
 Copyright (C) 2015 Cavon
 

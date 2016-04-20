@@ -18,7 +18,7 @@ with open(path.join(here, 'DESCRIPTION.rst'), encoding='utf-8') as f:
 
 setup(
     name='SunFounder_PiPlus',
-    version='1.0.0',
+    version='1.2.0',
     description='SunFounder_PiPlus python module for Raspberry Pi',
     long_description=long_description,
 
@@ -30,7 +30,7 @@ setup(
     license='GNU',
 
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 1 - Beta',
 
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
