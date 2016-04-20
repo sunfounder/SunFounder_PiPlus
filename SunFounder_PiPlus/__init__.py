@@ -182,6 +182,9 @@ class DS1307(object):
 		_date = _blank.join(_date)
 		return _date, _time
 
+	def destroy(self):
+		pass
+
 class PCF8591(object):
 	# PCF8597 on Plus Shield
 	_ADC_bus = smbus.SMBus(1) # or bus = smbus.SMBus(0) for Revision 1 boards
